@@ -1,0 +1,28 @@
+Based on the video tutorial https://www.oreilly.com/learning/executing-an-external-command-in-python
+
+1. 'subprocess' is module in Python standard library that is used to invoke an external program/command
+
+2. There are 2 important methods in the module
+
+   - subprocess.call()
+   
+    -- output is directed to STDOUT
+   
+   - subprocess.check_output()
+   
+    -- to capture the output into a variable
+    
+3. Arguments to the methods
+
+  eg: 1. list files in a directory
+  
+      -- subprocess.call('ls')                # command as a string
+      
+      2. list files in a directory with some arguments for the 'ls' command
+      
+       -- subprocess.call(['ls', '-l'])       # command as a list of strings with the command and its arguments as elements of the list
+       
+      3. list files in a directory using wild cards
+      
+      -- subprocess.call('ls *py', shell=True)  # wildcards are specific to the shell, so the shell=True should be passed and allow the command 
+         to execute in shell.
