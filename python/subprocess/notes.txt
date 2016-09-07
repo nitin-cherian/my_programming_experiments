@@ -26,3 +26,5 @@ Based on the video tutorial https://www.oreilly.com/learning/executing-an-extern
       
       -- subprocess.call('ls *py', shell=True)  # wildcards are specific to the shell, so the shell=True should be passed and allow the command 
          to execute in shell.
+
+4. write the output from check_output() method into a file
