@@ -13,6 +13,11 @@ print("ls -l using check_output: {}".format(output))
 print('type of output is : {}'.format(type(output)))
 print()
 
+output = subprocess.check_output(['ls', '-l'], universal_newlines=True)
+print("ls -l using check_output with universal_newline=True: {}".format(output))
+print('type of output is : {}'.format(type(output)))
+print()
+
 output = subprocess.check_output(['ls -l *py'], shell=True)
 print('output using wildcard: {}'.format(output))
 print()
